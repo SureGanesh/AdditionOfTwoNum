@@ -4,64 +4,86 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingRight="16dp"
-    android:paddingLeft="16dp"
     android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
     android:paddingTop="16dp"
     tools:context="com.example.kvana.addition.MainActivity">
-
 
     <TextView
         android:id="@+id/tv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="First Number"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:textSize="20sp"
-        />
+        android:layout_alignParentTop="true"
+        android:text="First Number"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/tv2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Second Number"
-        android:textSize="20sp"
         android:layout_below="@+id/tv1"
-        android:layout_marginTop="15dp" />
+        android:layout_marginTop="15dp"
+        android:text="Second Number"
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/editText"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/tv1"
-        android:layout_toRightOf="@+id/tv2"
+        android:layout_marginLeft="30dp"
         android:layout_toEndOf="@+id/tv2"
-       android:layout_marginLeft="30dp" />
+        android:layout_toRightOf="@+id/tv2" />
 
     <EditText
         android:id="@+id/edit3"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText"
-        android:layout_alignStart="@+id/editText" />
+        android:layout_alignStart="@+id/editText"
+        android:layout_below="@+id/editText" />
 
-    <Button
-        android:onClick="add"
-        android:id="@+id/btnadd"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/edit3"
-        android:layout_marginTop="30dp"
-        android:layout_toEndOf="@+id/tv1"
-        android:text="Add" />
+        android:orientation="horizontal"
+        android:layout_below="@+id/edit3">
+
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Add" />
+
+        <Button
+            android:id="@+id/btn_subtraction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="subtraction" />
+
+        <Button
+            android:id="@+id/btn_multiplication"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="multiplication" />
+
+        <Button
+            android:id="@+id/btn_division"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="divison" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/tvans"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/btnadd"
-        android:layout_centerVertical="true"
-        android:text="Ans is" />
+        android:layout_alignParentBottom="true"
+        android:text="Ans is:" />
 </RelativeLayout>
